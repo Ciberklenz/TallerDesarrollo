@@ -4,7 +4,7 @@
     <header class="masthead">
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Sistema de Registro de Facturas LTDA</h1>
+                <h1 id="homeHeading">Sistema de Registro de Facturas LTDA 2.0</h1>
                 <p>Proyecto Desarrollado UBB Taller de Desarrollo</p>
                 <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{ url('/login') }}">Ingresar</a>
             </div>
