@@ -70,9 +70,9 @@ Route::get('obras/{id}/edit', [
 Route::get('sendemail',function(){
     $data = array('name' =>"Cuenta creada, consultar contraseña al administrador" , );
 
-    Mail::send('emails.manda', $data, function($message) {
+    Mail::send('users', $data, function($message) {
         $message -> from('1togos4@gmail.com','Cuenta creada');
-        $message -> to ('1togos4@gmail.com','john') -> subject('test ');
+        $message -> to ('email','name') -> subject('test ');
     });
 
     return "se mando correo";

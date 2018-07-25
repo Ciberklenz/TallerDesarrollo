@@ -108,4 +108,15 @@ class UsersController extends Controller
         Flash::error('El usuario '.$user->name.' ha sido eliminado');
         return redirect()->route('users.index');
     }
+
+    public function sendEmailReminder(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+
+        Mail::send('emails.reminder', ['user' => $user], function ($m) use ($user) {
+            $m->from('hello@app.com', 'Your Application');
+
+            $m->to($user->email, $user->name)->subject('Your Reminder!');
+        });
+    }
 }
