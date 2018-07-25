@@ -4,7 +4,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/logout');
 
 Route::auth();
 Route::get('/admin', function () {
@@ -66,6 +66,18 @@ Route::get('obras/{id}/edit', [
     'uses' => 'ObrasController@edit',
     'as' => 'obras.edit'
 ]);
+
+Route::get('sendemail',function(){
+    $data = array('name' =>"Cuenta creada, consultar contraseña al administrador" , );
+
+    Mail::send('emails.manda', $data, function($message) {
+        $message -> from('1togos4@gmail.com','Cuenta creada');
+        $message -> to ('1togos4@gmail.com','john') -> subject('test ');
+    });
+
+    return "se mando correo";
+});
+
 
 
 
