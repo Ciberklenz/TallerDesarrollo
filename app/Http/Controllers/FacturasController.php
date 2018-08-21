@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Factura;
 use App\User;
+use App\Proveedor;
 use Laracasts\Flash\Flash;
 use App\Http\Controllers;
 use App\Http\Controllers\Controller;

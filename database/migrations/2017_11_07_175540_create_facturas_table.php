@@ -23,7 +23,7 @@ class CreateFacturasTable extends Migration
             $table->integer('valor_total');
             $table->enum('tipo_pago', ['Credito', 'Debito', 'Efectivo'])->default('Credito');
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('proveedor_id')->insigned();
             $table->rememberToken();
             $table->timestamps();
         });

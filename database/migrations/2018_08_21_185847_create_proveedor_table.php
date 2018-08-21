@@ -17,7 +17,7 @@ class CreateProveedorTable extends Migration
             $table->primary('id_proveedor');
             $table->string('nombre_proveedor', 100);
             $table->string('rut_proveedor', 100);         
-            $table->integer('contacto');
+            $table->string('contacto',20);
             $table->string('email_proveedor');
 			$table->string('direccion',200);
 			$table->string('rubro',100);

@@ -20,10 +20,16 @@ class Factura extends Model
         'valor_total',
         'tipo_pago',
         'user_id',
+		'proveedor_id',
     ];
 
     public function User(){
 
         return $this->belongsTo('App\User');
     }
+	
+	public function Proveedor(){
+		
+		return $this->belongsTo('App\Proveedor');
+	}
 }

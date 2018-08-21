@@ -306,11 +306,13 @@ class ComposerStaticInit9a0f1cf7c052b2135aef51f78817ec4f
 
     public static $classMap = array (
         'Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
+        'CreateFacturasForaneasTable' => __DIR__ . '/../..' . '/database/migrations/2018_08_21_192007_create_facturas_foraneas_table.php',
         'CreateFacturasTable' => __DIR__ . '/../..' . '/database/migrations/2017_11_07_175540_create_facturas_table.php',
         'CreateMateriales' => __DIR__ . '/../..' . '/database/migrations/2017_11_07_175542_create_materiales.php',
         'CreateObrasTable' => __DIR__ . '/../..' . '/database/migrations/2017_11_07_175541_create_obras_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreatePertenecesTable' => __DIR__ . '/../..' . '/database/migrations/2017_11_07_175620_create_perteneces_table.php',
+        'CreateProveedorForaneasTable' => __DIR__ . '/../..' . '/database/migrations/2018_08_21_191953_create_proveedor_foraneas_table.php',
         'CreateProveedorTable' => __DIR__ . '/../..' . '/database/migrations/2018_08_21_185847_create_proveedor_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
@@ -391,6 +393,8 @@ class ComposerStaticInit9a0f1cf7c052b2135aef51f78817ec4f
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
         'IlluminateQueueClosure' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
+        'MaterialesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/MaterialesTableSeeder.php',
+        'ObrasTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ObrasTableSeeder.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
@@ -796,6 +800,7 @@ class ComposerStaticInit9a0f1cf7c052b2135aef51f78817ec4f
         'PHP_Token_XOR_EQUAL' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD_FROM' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
+        'ProveedorTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ProveedorTableSeeder.php',
         'SebastianBergmann\\Comparator\\ArrayComparator' => __DIR__ . '/..' . '/sebastian/comparator/src/ArrayComparator.php',
         'SebastianBergmann\\Comparator\\Comparator' => __DIR__ . '/..' . '/sebastian/comparator/src/Comparator.php',
         'SebastianBergmann\\Comparator\\ComparisonFailure' => __DIR__ . '/..' . '/sebastian/comparator/src/ComparisonFailure.php',
@@ -835,6 +840,7 @@ class ComposerStaticInit9a0f1cf7c052b2135aef51f78817ec4f
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
         'UserTableSeeder' => __DIR__ . '/../..' . '/database/seeds/UserTableSeeder.php',
+        'UsersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/UsersTableSeeder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
