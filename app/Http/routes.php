@@ -39,6 +39,18 @@ Route::get('facturas/{numero_factura}/edit', [
 
 Route::get('/home', 'HomeController@index');
 
+Route::resource('proveedores','ProveedorController');
+Route::get('proveedores/{id}/destroy', [
+    'uses' => 'ProveedorController@destroy',
+    'as' => 'proveedor.destroy'
+]);
+
+Route::get('proveedor/{id}/edit', [
+    'uses' => 'ProveedorController@edit',
+    'as' => 'proveedor.edit'
+]);
+
+
 Route::resource('users', 'UsersController');
 Route::get('users/{id}/destroy', [
     'uses' => 'UsersController@destroy',

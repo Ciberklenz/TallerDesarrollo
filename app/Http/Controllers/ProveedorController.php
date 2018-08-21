@@ -7,18 +7,23 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Proveedor;
+use Laracasts\Flash\Flash;
+use App\Http\Controllers;
+
+
 
 class ProveedorController extends Controller
 {
     public function index()
     {
         $proveedor = Proveedor::all();
-        return view('proveedor.index')->with('proveedor',$proveedor);
+       // dd($proveedor);
+        return view('proveedores.index')->with('proveedores',$proveedor);
     }
 
     public function create()
     {
-        $proveedor = Proveedor::orderBy('name','ASC')->lists('name','id');
+
         return view('proveedor.create')->with('proveedor', $proveedor);
     }
 

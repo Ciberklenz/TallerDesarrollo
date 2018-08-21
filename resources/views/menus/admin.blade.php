@@ -28,6 +28,17 @@
                             <li><a href="{{route('users.index')}}">Lista de Usuarios</a></li>
                         </ul>
                     </li>
+
+                    <!--Menu de Proveedores-->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Proveedores <span
+                                    class="caret"></span><span style="font-size:16px;"
+                                                               class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+                        <ul class="dropdown-menu forAnimate" role="menu">
+                            <li><a href="{{route('proveedores.index')}}">Listar de Proveedores</a></li>
+                        </ul>
+                    </li>
+
                     <!--Menu de Facturas -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Facturas <span
