@@ -6,7 +6,7 @@
     <table class="table table-striped">
         <thead>
 
-        <button href="{{route('facturas.create')}}" type="button" class="btn btn-success" data-toggle="modal"
+        <button href="{{route('proveedores.create')}}" type="button" class="btn btn-success" data-toggle="modal"
                 data-target=".bs-example-modal-lg">Crear Proveedor
         </button>
         <a class="btn btn-primary " href="./home">Home</a>
@@ -27,21 +27,21 @@
 
         </thead>
         <tbody>
-@foreach($proveedor as $value)
+@foreach($proveedores as $proveedor)
             <tr>
-                <td>{{$value->id_proveedor}}</td>
-                <td>{{$value->nombre_proveedor}}</td>
-                <td>{{$value->rut_proveedor}}</td>
-                <td>{{$value->contacto}}</td>
-                <td>{{$value->email_proveedor}}</td>
-                <td>{{$value->direccion}}</td>
-                <td>{{$value->rubro}}</td>
+                <td>{{$proveedor->id}}</td>
+                <td>{{$proveedor->nombre_proveedor}}</td>
+                <td>{{$proveedor->rut_proveedor}}</td>
+                <td>{{$proveedor->contacto}}</td>
+                <td>{{$proveedor->email_proveedor}}</td>
+                <td>{{$proveedor->direccion}}</td>
+                <td>{{$proveedor->rubro}}</td>
 
 
-                <td><a href="{{route('proveedor.edit',$proveedor->id_proveedor)}}" class="btn btn-warning">
+                <td><a href="{{route('proveedores.edit',$proveedor->id)}}" class="btn btn-warning">
                             <span class="glyphicon glyphicon-wrench" aria-hidden="true">
                             </span> </a>
-                    <a href="{{route('proveedor.destroy',$proveedor->id_proveedor)}}"
+                    <a href="{{route('proveedores.destroy',$proveedor->id)}}"
                        onclick="return confirm('¿Seguro de Eliminar esa factura?')" class="btn btn-danger">
                             <span class="glyphicon glyphicon-remove-circle" aria-hidden="true">
                             </span> </a></td>
@@ -49,6 +49,6 @@
         @endforeach
         </tbody>
     </table>
-    {{$proveedor->render()}}
+    {{$proveedores->render()}}
 
 @endsection

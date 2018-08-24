@@ -15,7 +15,7 @@ class CreateFacturasForaneasTable extends Migration
             
             Schema::table('facturas', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-			$table->foreign('proveedor_id')->references('id_proveedor')->on('proveedores')->onDelete('cascade');
+			$table->foreign('proveedor_id')->references('id')->on('proveedores')->onDelete('cascade');
             });
     }
 

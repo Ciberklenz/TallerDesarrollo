@@ -12,19 +12,20 @@ use App\Http\Controllers;
 
 
 
+
 class ProveedorController extends Controller
 {
     public function index()
     {
-        $proveedor = Proveedor::all();
-       // dd($proveedor);
-        return view('proveedores.index')->with('proveedores',$proveedor);
+        $proveedores = Proveedor::orderBy('id','ASC')->paginate(5);
+        //dd($proveedores);
+        return view('proveedores.index')->with('proveedores',$proveedores);
     }
 
     public function create()
     {
 
-        return view('proveedor.create')->with('proveedor', $proveedor);
+        return view('proveedores.create');
     }
 
     /**
@@ -35,11 +36,11 @@ class ProveedorController extends Controller
      */
     public function store(Request $request)
     {
-        $proveedor = new Proveedor($request->all());
-        $proveedor->save();
+        $proveedores = new Proveedor($request->all());
+        $proveedores->save();
 
         Flash::success('El Proveedor a sido ingresada con exito');
-        return redirect()->route('proveedor.index');
+        return redirect()->route('proveedores.index');
     }
 
     /**
@@ -59,10 +60,10 @@ class ProveedorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($numero_factura)
+    public function edit($id)
     {
-        $proveedor = Proveedor::find($id_proveedor);
-        return view('proveedor.edit')->with('proveedor',$proveedor);
+        $proveedores = Proveedor::find($id);
+        return view('proveedores.edit')->with('proveedores',$proveedores);
     }
 
     /**
@@ -72,13 +73,13 @@ class ProveedorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $numero_factura)
+    public function update(Request $request, $id)
     {
-        $proveedor = Proveedor::find($proveedor);
-        $proveedor->fill($request->all());
-        $proveedor->save();
+        $proveedores = Proveedor::find($id);
+        $proveedores->fill($request->all());
+        $proveedores->save();
         Flash::warning('El proveedor ha sido modificada');
-        return redirect()->route('proveedor.index');
+        return redirect()->route('proveedores.index');
     }
 
     /**
@@ -87,11 +88,11 @@ class ProveedorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id_proveedor)
+    public function destroy($id)
     {
-        $proveedor = Proveedor::find($id_proveedor);
-        $proveedor->delete();
+        $proveedores = Proveedor::find($id);
+        $proveedores->delete();
         Flash::error('Proveedor eliminada');
-        return redirect()->route('proveedor.index');
+        return redirect()->route('proveedores.index');
     }
 }

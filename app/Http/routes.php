@@ -42,12 +42,12 @@ Route::get('/home', 'HomeController@index');
 Route::resource('proveedores','ProveedorController');
 Route::get('proveedores/{id}/destroy', [
     'uses' => 'ProveedorController@destroy',
-    'as' => 'proveedor.destroy'
+    'as' => 'proveedores.destroy'
 ]);
 
-Route::get('proveedor/{id}/edit', [
+Route::get('proveedores/{id}/edit', [
     'uses' => 'ProveedorController@edit',
-    'as' => 'proveedor.edit'
+    'as' => 'proveedores.edit'
 ]);
 
 
