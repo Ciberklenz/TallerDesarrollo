@@ -13,6 +13,12 @@ use App\Http\Requests\ObraRequest;
 
 class ObrasController extends Controller
 {
+    public function __construct(){
+
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
         $obra = Obra::orderBy('id', 'ASC')->paginate(0);

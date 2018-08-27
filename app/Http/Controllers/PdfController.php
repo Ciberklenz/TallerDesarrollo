@@ -20,7 +20,12 @@ class PdfController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-  
+    public function __construct(){
+
+        $this->middleware('auth');
+    }
+
+
     public function index(){
     $facturas = Factura::paginate(15);
     $obra = Obra::paginate(5);
